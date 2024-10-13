@@ -1,7 +1,7 @@
 // App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import AdminLogin from './pages/adminLogin';
+import AdminLogin from './pages/AdminLogin';
 import UserForm from './pages/UserForm';
 
 function App() {
