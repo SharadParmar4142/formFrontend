@@ -24,7 +24,7 @@ function UserForm() {
     });
 
     try {
-      const res = await axios.post('http://localhost:4993/api/user/upload', formData, {
+      const res = await axios.post('https://form-backend-tau.vercel.app/api/user/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       console.log(res.data);

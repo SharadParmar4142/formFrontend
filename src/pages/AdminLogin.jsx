@@ -22,7 +22,7 @@ function AdminLogin() {
     // In case u want to use it on your local host then use the below command. Happy Coding (Hope it helps u too :) )
     //   const response = await axios.post('http://localhost:<port>/api/admin/login', { adminID: userID, password });
 
-      const response = await axios.post('https://form-backend-mfoqqrayq-sharadparmar4142s-projects.vercel.app/api/admin/login', { adminID: userID, password });
+      const response = await axios.post('https://form-backend-tau.vercel.app/api/admin/login', { adminID: userID, password });
 
       if (response.status === 200) {
         setIsLoggedIn(true); // Set login status to true
@@ -47,7 +47,7 @@ function AdminLogin() {
     // In case u want to use it on your local host then use the below command. Happy Coding (Hope it helps u too :)  )
     //   const response = await axios.post('http://localhost:<port>/api/admin/register', { adminID: userID, password });
 
-      const response = await axios.post('https://form-backend-mfoqqrayq-sharadparmar4142s-projects.vercel.app/api/admin/register', { adminID: userID, password });
+      const response = await axios.post('https://form-backend-tau.vercel.app/api/admin/register', { adminID: userID, password });
 
       if (response.status === 200) {
         setIsLoggedIn(true); // Set login status to true
