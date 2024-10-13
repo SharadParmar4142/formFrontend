@@ -37,25 +37,29 @@ function AdminLogin() {
   // Handle register form submission
   const handleRegister = async (e) => {
     e.preventDefault();
-
+  
     if (!userID || !password) {
       setErrorMessage('Please enter both userID and password.');
       return;
     }
-
+  
     try {
-    // In case u want to use it on your local host then use the below command. Happy Coding (Hope it helps u too :)  )
-    //   const response = await axios.post('http://localhost:<port>/api/admin/register', { adminID: userID, password });
-
-      const response = await axios.post('https://form-backend-tau.vercel.app/api/admin/register', { adminID: userID, password });
-
+      // Make the POST request with the correct CORS configuration
+      const response = await axios.post(
+        'https://form-backend-tau.vercel.app/api/admin/register',
+        { adminID: userID, password },
+        { withCredentials: true } // Ensure credentials (cookies) are sent
+      );
+  
       if (response.status === 200) {
         setIsLoggedIn(true); // Set login status to true
       }
     } catch (error) {
       setErrorMessage('Registration failed. Please try again.');
+      console.error(error);
     }
   };
+  
 
   return (
     <>
